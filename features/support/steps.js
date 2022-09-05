@@ -1,6 +1,6 @@
 const assert = require("assert");
 const { When, Then } = require("@cucumber/cucumber");
-const greeter = require("../../src/Greeter");
+const greeter = require("../../src/solutions");
 
 When("the greeter says hello", function () {
   this.whatIHeard = greeter.sayHello();
