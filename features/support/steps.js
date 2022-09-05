@@ -1,11 +1,15 @@
 const assert = require("assert");
-const { When, Then } = require("@cucumber/cucumber");
-const greeter = require("../../src/solutions");
+const { When, Then, Given } = require("@cucumber/cucumber");
+const { combiner } = require("../../src/solutions");
 
-When("the greeter says hello", function () {
-  this.whatIHeard = greeter.sayHello();
+Given("A string {string} and another string {string}", function () {
+  return "TopCoder";
 });
 
-Then("I should have heard {string}", function (expectedResponse) {
-  assert.equal(this.whatIHeard, expectedResponse);
+When("I call combiner passing both strings as parameters", function () {
+  this.result = combiner("Tpo", "oCder");
+});
+
+Then("The result should be {string}", function (expectedResponse) {
+  assert.equal(this.result, expectedResponse);
 });
