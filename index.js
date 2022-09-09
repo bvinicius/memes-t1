@@ -1,3 +1,3 @@
-const { combiner } = require("./src/solutions");
+const { hohoho } = require("./src/solutions");
 
-console.log(combiner("Tpo", "oCder"));
+console.log(hohoho(5));
